@@ -5,6 +5,9 @@ h1,h2,h3,a {
   width: fit-content;
   margin: 0 auto;
 }
+.displaynone {display: none !important;}
+
+li {list-style: none;}
 
 body {background-color: #060606;color:#e7e7e7}
 
@@ -30,6 +33,7 @@ body {background-color: #060606;color:#e7e7e7}
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;  
 }
+
 
 .slide {
   width: 150px;
