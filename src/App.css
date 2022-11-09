@@ -32,6 +32,7 @@ body {background-color: #060606;color:#e7e7e7}
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;  
+  scrollbar-width: none;
 }
 
 
@@ -41,4 +42,12 @@ body {background-color: #060606;color:#e7e7e7}
   flex-shrink: 0;
   background: #d9d9d9;
   border-radius: 25px;
+  /* background: 
+  background-size: cover; */
+  /* background-image: url(/src/imgs/congregadores\ mão.png); */
 }  
+
+.Guardiões {
+  background: url(/src/components/imgs/Guardians.png) center;
+  background-size: cover;
+}

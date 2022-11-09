@@ -5,9 +5,14 @@ import Detail from './components/Detail';
 import Home from './components/Home';
 
 function App() {
+  const { pathname } = window.location;
+  let Page;
+  if (pathname === 'Home') {
+    Page = Home
+  } else {Page = Home}
   return (
     <div>
-      <Home />
+      <Page />
     </div>
   );
 }
