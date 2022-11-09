@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Detail from './components/Detail';
 import Home from './components/Home';
-
+import './imgs.css'
 function App() {
   const { pathname } = window.location;
   let Page;

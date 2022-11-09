@@ -3,10 +3,13 @@ import Detail from './Detail'
 import Header from './Header'
 import AllHists from './Backend'
 import Hists from './Hists'
+import { Series } from './Backend'
+import { Solos } from './Backend'
+import { LeiaAgora } from './Backend'
 const Home = () => {
     
 
-    console.log(AllHists)
+    console.log(Series,Solos)
   return (
     <div>
         <Header Nome="Home"/>
@@ -27,22 +30,21 @@ const Home = () => {
         <p style={{marginLeft: '12px'}}>Histórias simples,curtas e interessantes.</p>
         </div>
         <br></br>
-            <Hists />
+            <Hists tipo='comece' />
         <div>
             <br></br>
         <h1 style={{marginLeft: '12px',fontWeight: 'normal'}}>Series Disponíveis</h1>
         <p style={{marginLeft: '12px'}}>Histórias divididas em episódios.</p>
         </div>
         <br></br>
-        <div className='slider'>
-            <div className='slide'></div>
-            <div className='slide'></div>
-            <div className='slide'></div>
-            <div className='slide'></div>
-            <div className='slide'></div>
-            <div className='slide'></div>
-            <div className='slide'></div>
+        <Hists tipo='series' />
+        <div>
+            <br></br>
+        <h1 style={{marginLeft: '12px',fontWeight: 'normal'}}>Solos Disponíveis</h1>
+        <p style={{marginLeft: '12px'}}>Histórias contadas de forma singular e dinâmica,normalmente pra aprofundar personagens específicos..</p>
         </div>
+        <br></br>
+        <Hists tipo='solos' />
     </section>
     </div>
   )

@@ -1,0 +1,62 @@
+.Guardiões {
+    background: url(/src/components/imgs/Guardiões.png) center;
+    background-size: cover;
+  }
+
+  .Ciecon {
+    background: url(/src/components/imgs/Ciecon.jpg) center;
+    background-size: 122.2%;
+  }
+
+  .Kerry {
+    background: url(/src/components/imgs/Kerry.png) center;
+    background-size: cover;
+  }
+
+  
+  .Menino {
+    background: url(/src/components/imgs/mr.png) center;
+    background-size: cover;
+  }
+
+  
+  .Glacial {
+    background: url(/src/components/imgs/Glac.png) center;
+    background-size: 100%;
+    background-repeat: repeat-y;
+  }
+
+  
+  .Kerry {
+    background: url(/src/components/imgs/Kerry.png) center;
+    background-size: cover;
+  }
+
+  
+  .Right {
+    background: url(/src/components/imgs/RRHvermelha.png) center;
+    background-size: cover;
+  }
+
+  
+  .Deroo {
+    background: url(/src/components/imgs/Deroo.png) center;
+    background-size: 140%;
+    background-repeat: repeat-x;
+    background-color: #d4b6b6;
+  }
+
+  
+  .Hades {
+    background: url(/src/components/imgs/HADES.png) center;
+    background-size: cover;
+  }
+
+  
+  .Punho {
+    background: url(/src/components/imgs/pm.png) center;
+    background-size: 100%;
+  }
+
+
+
