@@ -4,12 +4,16 @@ import Header from './components/Header';
 import Detail from './components/Detail';
 import Home from './components/Home';
 import './imgs.css'
+import PageHist from './components/PageHist';
+
 function App() {
   const { pathname } = window.location;
   let Page;
-  if (pathname === 'Home') {
+  if (pathname === '/') {
     Page = Home
-  } else {Page = Home}
+  } else if (pathname.startsWith('/paghist')) {
+    Page = PageHist
+  }
   return (
     <div>
       <Page />

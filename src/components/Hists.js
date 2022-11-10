@@ -4,7 +4,7 @@ import { LeiaAgora, Series, Solos } from "./Backend"
 const Div = (nome,local,tipo,desc,img) => {
   // const imglink = 'url('+img+')'
   return (
-<div className={`slide ${nome}`}></div>
+<a key={nome} href={'paghist' + nome} onClick={() => localStorage.setItem('UVC_Desc',desc)}><div className={`slide ${nome}`}></div></a>
 )
 }
 

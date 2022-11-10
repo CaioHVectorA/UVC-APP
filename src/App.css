@@ -47,7 +47,10 @@ body {background-color: #060606;color:#e7e7e7}
   /* background-image: url(/src/imgs/congregadores\ mão.png); */
 }  
 
-.Guardiões {
-  background: url(/src/components/imgs/Guardians.png) center;
-  background-size: cover;
+.Button {
+  background-color: #FFBB3D;
+    color: #020202;
+    font-size: 20px;
+    padding: 3px 6px;
+    border-radius: 25px;
 }
