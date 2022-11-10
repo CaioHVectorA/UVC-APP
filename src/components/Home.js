@@ -41,7 +41,7 @@ const Home = () => {
         <div>
             <br></br>
         <h1 style={{marginLeft: '12px',fontWeight: 'normal'}}>Solos Disponíveis</h1>
-        <p style={{marginLeft: '12px'}}>Histórias contadas de forma singular e dinâmica,normalmente pra aprofundar personagens específicos..</p>
+        <p style={{marginLeft: '12px'}}>Histórias contadas de forma singular e dinâmica,normalmente pra aprofundar personagens específicos.</p>
         </div>
         <br></br>
         <Hists tipo='solos' />

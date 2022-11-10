@@ -6,6 +6,7 @@
   .Ciecon {
     background: url(/src/components/imgs/Ciecon.jpg) center;
     background-size: 115%;
+    background-repeat: repeat;
   }
 
   .Kerry {

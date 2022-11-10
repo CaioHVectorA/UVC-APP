@@ -19,7 +19,7 @@ var Glac = new hist('O Glacial Fim do mundo','Solos','Terra','Cole Froz chega no
 var Hades = new hist('Hades','Solos','Universal','Veja os objetivos malignos e a origem do grandioso e temido Hades,conhecido como o Demônio.','HADES.png')
 var PunhoMortal = new hist('Punho Mortal','Solos','Conheça a história de Naok, o Aedificante que se tornou um dos grandes Congregadores!.','Punho Mortal.png')
 var RRH = new hist('Red Right Hand','Series','Universal','Se aprofunda na equipe Red Right Hand,que juntando as forças dos 5 superpoderosos,pretendem dominar todo o universo!','RRH 2.png')
-var DD = new hist('Deroo Da no espaço','Series','Veja a narrativa de Deroo Da em seu próprio diário,acompanhando a visão do intelectual.','Deroo Da em.png')
+var DD = new hist('Deroo Da no espaço','Series','Universal','Veja a narrativa de Deroo Da em seu próprio diário,acompanhando a visão do intelectual.','Deroo Da em.png')
 
 
 

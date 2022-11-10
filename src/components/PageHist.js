@@ -2,41 +2,96 @@ import React from 'react'
 import Header from './Header'
 import Search from '../Search.svg'
 import Detail from './Detail'
+import { AllAtos } from './BackendEPS'
+// import {RedRightHand,DerooDaEm,Guardiões} from './BackendEPS'
+var AtoAtual = 0
+var AntCap = AtoAtual++
+var AddCap = (AtoAtual - 1) * 4
 
-const Ep = () => {
-return (
-    <div>
-    <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
-    <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio 1</h2>
-    <a className='Button'>Ler Agora</a>
-    </div>
-    <p>Descriçao aqui</p>
-    </div>
-)
+let PathFull;
+const { pathname } = window.location
+let PathTrue = pathname.replace('/paghist','')
+const Space = PathTrue.includes('%20')
+ if (!Space) {
+    PathFull = PathTrue
+} else {
+    PathFull = PathTrue.replaceAll('%20',' ')
+}
+if (PathFull.startsWith('Guardi')) {
+    PathFull = 'Guardiões'
+}
+if (PathFull.startsWith('Deroo')) {
+    PathFull = 'Deroo Da em...'
+}
+let temp = PathFull.replaceAll(' ','');let callData = temp.replaceAll('.','')
+AllAtos.forEach(Ato => {
+    if (Ato[0].origin === callData) {
+        Data = Ato
+    }
+});
+
+if (Data[0].origin === 'RedRightHand' && AntCap > 0) {
+    var AddCap = (AtoAtual - 1) * 4 + 1
 }
 
+
+function romanize (num) {
+    if (isNaN(num))
+        return NaN;
+    var digits = String(+num).split(""),
+        key = ["","C","CC","CCC","CD","D","DC","DCC","DCCC","CM",
+               "","X","XX","XXX","XL","L","LX","LXX","LXXX","XC",
+               "","I","II","III","IV","V","VI","VII","VIII","IX"],
+        roman = "",
+        i = 3;
+    while (i--)
+        roman = (key[+digits.pop() + (i * 10)] || "") + roman;
+    return Array(+digits.join("") + 1).join("M") + roman;
+}
+
+var Data;
 const MiniDetail = () => {
     return (
         <div style={{backgroundColor: 'rgba(255,255,255,0.2)',width: '20vw',height: '2px',marginLeft: '32px',marginTop: '18px'}}></div>
     )
 }
 
+const Ep = (Num) => {
+    let NumEp;
+    NumEp = Num
+    let descri; 
+    let temp = Num
+    let i = --temp
+    if (Data != null) {
+        descri = Data[AntCap].Eps[i]
+    } else {descri = 'Carregando...'}
+    return (
+        <div>
+        <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
+        <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio {NumEp}</h2>
+        <a className='Button'>Ler Agora</a>
+        </div>
+        <p style={{marginLeft:'32px',opacity: '0.7'}}>{descri}</p>
+        <MiniDetail />
+    <br />
+        </div>
+    )
+    }
+    const DivEps = () => {
+        let num = 1
+        let numtrue = num + AddCap
+        let Eps = Data[AntCap].Eps
+
+        return (
+            <div>
+            {Eps.map(() => (
+                Ep(numtrue++)
+              ))}
+              </div>
+        )
+    }
+
 const PageHist = () => {
-    let PathFull;
-    const { pathname } = window.location
-    let PathTrue = pathname.replace('/paghist','')
-   const Space = PathTrue.includes('%20')
-     if (!Space) {
-        PathFull = PathTrue
-    } else {
-        PathFull = PathTrue.replaceAll('%20',' ')
-    }
-
-    console.log(PathFull.startsWith('Guardi'),PathFull)
-    if (PathFull.startsWith('Guardi')) {
-        PathFull = 'Guardiões'
-    }
-
   return (
     <div style={{paddingBottom: '200px'}}>
     <Header Nome="Capítulos" />
@@ -47,42 +102,22 @@ const PageHist = () => {
     <img style={{marginTop: '12px'}} src={Search} />
     <br />
     <Detail />
-    <h2 style={{fontWeight: 'normal'}}>Ato II</h2>
-    <h2 style={{fontWeight: 'normal'}}>Diplomacia Falsa</h2>
+    <h2 style={{fontWeight: 'normal'}}>Ato {romanize(AtoAtual)}</h2>
+    <h2 style={{fontWeight: 'normal'}}>{Data[AntCap].Nome}</h2>
     </div>
     <br />
-    <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
-    <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio 1</h2>
-    <a className='Button'>Ler Agora</a>
-    </div>
-    <p style={{marginLeft:'32px',opacity: '0.7'}}>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra placerat efficitur. Praesent volutpat  </p>
+    {/* <Ep Num={1+AddCap}/>
     <MiniDetail />
     <br />
-    <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
-    <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio 2</h2>
-    <a className='Button'>Ler Agora</a>
-    </div>
-    <p style={{marginLeft:'32px',opacity: '0.7'}}>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra placerat efficitur. Praesent volutpat  </p>
+   <Ep Num={2+AddCap}/>
     <MiniDetail />
     <br />
-    <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
-    <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio 3</h2>
-    <a className='Button'>Ler Agora</a>
-    </div>
-    <p style={{marginLeft:'32px',opacity: '0.7'}}>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra placerat efficitur. Praesent volutpat  </p>
+   <Ep Num={3+AddCap}/>
     <MiniDetail />
     <br />
-    <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
-    <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio 4</h2>
-    <a className='Button'>Ler Agora</a>
-    </div>
-    <p style={{marginLeft:'32px',opacity: '0.7'}}>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus viverra placerat efficitur. Praesent volutpat  </p>
-    <MiniDetail />
-
+   <Ep Num={4+AddCap}/>
+    <MiniDetail /> */}
+    <DivEps />
 
     </div>
   )
