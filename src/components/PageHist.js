@@ -4,9 +4,13 @@ import Search from '../Search.svg'
 import Detail from './Detail'
 import { AllAtos } from './BackendEPS'
 // import {RedRightHand,DerooDaEm,Guardiões} from './BackendEPS'
-var AtoAtual = 0
+var AtoAtual = 1
+if (Data) {
+var EpPCap = Data
+console.log(EpPCap)
+}
+
 var AntCap = AtoAtual++
-var AddCap = (AtoAtual - 1) * 4
 
 let PathFull;
 const { pathname } = window.location
@@ -29,11 +33,13 @@ AllAtos.forEach(Ato => {
         Data = Ato
     }
 });
-
+if (Data) {
 if (Data[0].origin === 'RedRightHand' && AntCap > 0) {
     var AddCap = (AtoAtual - 1) * 4 + 1
+} 
+var AddCap = (AtoAtual - 1) * Data[0].NumEps
 }
-
+console.log(AddCap)
 
 function romanize (num) {
     if (isNaN(num))
