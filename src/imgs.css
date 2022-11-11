@@ -34,13 +34,13 @@
   }
 
   
-  .Right {
+  .Right,.RedRightHand {
     background: url(/src/components/imgs/RRHvermelha.png) center;
     background-size: cover;
   }
 
   
-  .Deroo {
+  .Deroo,.DerooDaem {
     background: url(/src/components/imgs/Deroo.png) center;
     background-size: 140%;
     background-repeat: repeat-x;

@@ -3,15 +3,9 @@ import Header from './Header'
 import Search from '../Search.svg'
 import Detail from './Detail'
 import { AllAtos } from './BackendEPS'
+import { useLocation } from 'react-router-dom'
+
 // import {RedRightHand,DerooDaEm,Guardiões} from './BackendEPS'
-var AtoAtual = 1
-if (Data) {
-var EpPCap = Data
-console.log(EpPCap)
-}
-
-var AntCap = AtoAtual++
-
 let PathFull;
 const { pathname } = window.location
 let PathTrue = pathname.replace('/paghist','')
@@ -28,18 +22,28 @@ if (PathFull.startsWith('Deroo')) {
     PathFull = 'Deroo Da em...'
 }
 let temp = PathFull.replaceAll(' ','');let callData = temp.replaceAll('.','')
+
 AllAtos.forEach(Ato => {
     if (Ato[0].origin === callData) {
         Data = Ato
     }
 });
+
+var AtoAtual = 0
+if (Data) {
+var EpPCap = Data
+
+}
+
+var AntCap = AtoAtual++
+
+
 if (Data) {
 if (Data[0].origin === 'RedRightHand' && AntCap > 0) {
     var AddCap = (AtoAtual - 1) * 4 + 1
 } 
 var AddCap = (AtoAtual - 1) * Data[0].NumEps
 }
-console.log(AddCap)
 
 function romanize (num) {
     if (isNaN(num))
@@ -86,11 +90,12 @@ const Ep = (Num) => {
     const DivEps = () => {
         let num = 1
         let numtrue = num + AddCap
-        let Eps = Data[AntCap].Eps
-
+        if (Data) {
+        var Epis = Data[AntCap].Eps
+        } else {var Epis = []}
         return (
             <div>
-            {Eps.map(() => (
+            {Epis.map(() => (
                 Ep(numtrue++)
               ))}
               </div>
@@ -102,14 +107,14 @@ const PageHist = () => {
     <div style={{paddingBottom: '200px'}}>
     <Header Nome="Capítulos" />
     <div style={{display:'grid',placeItems:'center'}}>
-    <div className={PathFull} style={{width:'240px',height:'230px',marginTop:'20px',borderRadius: '25px'}}></div>
+    <div className={callData} style={{width:'240px',height:'230px',marginTop:'20px',borderRadius: '25px'}}></div>
     <h1 style={{marginTop: '20px'}}>{PathFull}</h1>
     <p style={{textAlign:'center',padding: '0px 20px',fontSize:'20px'}}>{localStorage.UVC_Desc}</p>
     <img style={{marginTop: '12px'}} src={Search} />
     <br />
     <Detail />
     <h2 style={{fontWeight: 'normal'}}>Ato {romanize(AtoAtual)}</h2>
-    <h2 style={{fontWeight: 'normal'}}>{Data[AntCap].Nome}</h2>
+    <h2 style={{fontWeight: 'normal'}}>{Data == true ? Data[AntCap].Nome : ''}</h2>
     </div>
     <br />
     {/* <Ep Num={1+AddCap}/>

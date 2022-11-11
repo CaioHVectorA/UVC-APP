@@ -1,7 +1,7 @@
 import { LeiaAgora, Series, Solos } from "./Backend"
-
-
+import { NavLink } from "react-router-dom"
 const Div = (nome,local,tipo,desc,img) => {
+  var nometoLink = nome.replaceAll(' ','')
   // const imglink = 'url('+img+')'
   return (
 <a key={nome} href={'paghist' + nome} onClick={() => localStorage.setItem('UVC_Desc',desc)}><div className={`slide ${nome}`}></div></a>
