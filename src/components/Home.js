@@ -11,7 +11,7 @@ const Home = () => {
 
     console.log(Series,Solos)
   return (
-    <div>
+    <div style={{paddingBottom: '150px'}}>
         <Header Nome="Home"/>
     <section>
         <br></br>

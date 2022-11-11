@@ -8,7 +8,7 @@ import { useLocation } from 'react-router-dom'
 // import {RedRightHand,DerooDaEm,Guardiões} from './BackendEPS'
 let PathFull;
 const { pathname } = window.location
-let PathTrue = pathname.replace('/paghist','')
+let PathTrue = pathname.replace('/paghistSERIES','')
 const Space = PathTrue.includes('%20')
  if (!Space) {
     PathFull = PathTrue
@@ -29,9 +29,9 @@ AllAtos.forEach(Ato => {
     }
 });
 
-var AtoAtual = 0
+var AtoAtual = 1
 if (Data) {
-var EpPCap = Data
+var EpPCap = Data[1].NumEps
 
 }
 
@@ -73,10 +73,12 @@ const Ep = (Num) => {
     let temp = Num
     let i = --temp
     if (Data != null) {
-        descri = Data[AntCap].Eps[i]
+        var NumCap = Data[AntCap].NumCapitulo
+        descri = Data[AntCap].Eps[++temp - (EpPCap * NumCap - 1) + 1]
     } else {descri = 'Carregando...'}
+    console.log(Data)
     return (
-        <div>
+        <div key={Num}>
         <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
         <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio {NumEp}</h2>
         <a className='Button'>Ler Agora</a>
@@ -114,7 +116,7 @@ const PageHist = () => {
     <br />
     <Detail />
     <h2 style={{fontWeight: 'normal'}}>Ato {romanize(AtoAtual)}</h2>
-    <h2 style={{fontWeight: 'normal'}}>{Data == true ? Data[AntCap].Nome : ''}</h2>
+    <h2 style={{fontWeight: 'normal'}}>{Data != true ? Data[AntCap].Nome : ''}</h2>
     </div>
     <br />
     {/* <Ep Num={1+AddCap}/>
