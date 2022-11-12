@@ -6,7 +6,11 @@ import Home from './components/Home';
 import './imgs.css'
 import PageSerie from './components/PageHistSERIE';
 import PageSolos from './components/PageHistSOLOS';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';let PathFull;
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import ReadPage from './components/ReadPage';
+
+let PathFull;
 const { pathname } = window.location
 let PathTrue = pathname.replace('/paghist','')
 const Space = PathTrue.includes('%20')
@@ -33,6 +37,8 @@ function App() {
     Page = PageSerie
   } else if (pathname.startsWith('/paghistSOLOS')) {
     Page = PageSolos
+  } else if (pathname === '/Readpage') {
+    Page = ReadPage
   }
   return (
     <div>
