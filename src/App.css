@@ -10,7 +10,7 @@ h1,h2,h3,a {
 li {list-style: none;}
 
 body {background-color: #060606;color:#e7e7e7}
-
+html {scroll-behavior: smooth;}
 .title {
   margin: 0 auto;
   font-weight: bold;

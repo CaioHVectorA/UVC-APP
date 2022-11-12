@@ -76,12 +76,13 @@ const Ep = (Num) => {
         var NumCap = Data[AntCap].NumCapitulo
         descri = Data[AntCap].Eps[++temp - (EpPCap * NumCap - 1) + 1]
     } else {descri = 'Carregando...'}
-    console.log(Data)
+    var numToString = NumCap.toString()
+    console.log(PathFull)
     return (
         <div key={Num}>
         <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
         <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio {NumEp}</h2>
-        <a className='Button'>Ler Agora</a>
+        <a href='Readpage' onClick={() => {localStorage.setItem('UVC_HistAtual',callData+numToString)}} className='Button'>Ler Agora</a>
         </div>
         <p style={{marginLeft:'32px',opacity: '0.7'}}>{descri}</p>
         <MiniDetail />

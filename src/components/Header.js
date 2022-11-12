@@ -6,7 +6,7 @@ import Back from './Volta.svg'
 // um detalhe:Search e Favorite tao trocados
 const Header = (props) => {
   const { pathname } = window.location
-  const NotHome = pathname != '/'
+  const NotHome = pathname !== '/'
   console.log(NotHome)
   let marginLeft;
   let displaySeta;

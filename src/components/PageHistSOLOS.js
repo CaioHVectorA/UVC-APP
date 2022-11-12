@@ -38,7 +38,7 @@ console.log(soloData)
         <h1>{soloData.nome}</h1>
         <p style={{textAlign:'center',padding: '0px 26px',fontSize:'20px'}}>{soloData.descricao}</p>
         <div style={{display: 'grid',placeItems: 'center',paddingTop: '20px'}}>
-        <a href='Readpage' className='Button'>Ler Agora</a>
+        <a onClick={() => {localStorage.setItem('UVC_HistAtual',callData)}} href='Readpage' className='Button'>Ler Agora</a>
         <img style={{marginTop: '12px'}} src={Search} />
         </div>
     </div>
