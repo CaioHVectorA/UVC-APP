@@ -9,6 +9,7 @@ import PageSolos from './components/PageHistSOLOS';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReadPage from './components/ReadPage';
+import Error from './components/Error';
 
 let PathFull;
 const { pathname } = window.location
@@ -39,6 +40,8 @@ function App() {
     Page = PageSolos
   } else if (pathname === '/Readpage') {
     Page = ReadPage
+  } else if (pathname === '/error') {
+    Page = Error
   }
   return (
     <div>

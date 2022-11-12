@@ -76,7 +76,7 @@ const Ep = (Num) => {
         var NumCap = Data[AntCap].NumCapitulo
         descri = Data[AntCap].Eps[++temp - (EpPCap * NumCap - 1) + 1]
     } else {descri = 'Carregando...'}
-    var numToString = NumCap.toString()
+    var numToString = NumEp.toString()
     console.log(PathFull)
     return (
         <div key={Num}>

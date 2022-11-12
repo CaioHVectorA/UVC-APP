@@ -5,6 +5,8 @@ import Hades from './texts/Hades'
 import Kerry from './texts/Kerry'
 import OGlacialFimdomundo from './texts/OGlacialFimdomundo'
 import PunhoMortal from './texts/PunhoMortal'
+import RedRightHand from './texts/RedRightHand'
+
 
 
 
@@ -26,8 +28,8 @@ const readPage = () => {
     if (HistAtual === 'PunhoMortal') {
       HistComp = PunhoMortal
       }
-    if (HistAtual === 'Kerry') {
-      HistComp = Kerry
+    if (HistAtual.startsWith('Red')) {
+      HistComp = RedRightHand
       }
     if (HistAtual === 'Kerry') {
       HistComp = Kerry
