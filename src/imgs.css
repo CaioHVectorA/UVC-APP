@@ -15,7 +15,7 @@
   }
 
   
-  .Menino {
+  .Menino, .MeninoResiliente {
     background: url(/src/components/imgs/mr.png) center;
     background-size: cover;
   }

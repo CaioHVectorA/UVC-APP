@@ -29,7 +29,7 @@ AllAtos.forEach(Ato => {
     }
 });
 
-var AtoAtual = 1
+var AtoAtual = 0
 if (Data) {
 var EpPCap = Data[1].NumEps
 
@@ -82,7 +82,7 @@ const Ep = (Num) => {
         <div key={Num}>
         <div style={{display: 'flex',justifyContent: 'space-evenly',gap: '12px'}}>
         <h2 style={{fontWeight: 'normal',marginLeft:'32px'}}>Episódio {NumEp}</h2>
-        <a href='Readpage' onClick={() => {localStorage.setItem('UVC_HistAtual',callData+numToString)}} className='Button'>Ler Agora</a>
+        <a href='Readpage' onClick={() => {localStorage.setItem('UVC_HistAtual',callData+numToString);localStorage.setItem('PagAnterior',window.location.pathname)}} className='Button'>Ler Agora</a>
         </div>
         <p style={{marginLeft:'32px',opacity: '0.7'}}>{descri}</p>
         <MiniDetail />

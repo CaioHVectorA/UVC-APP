@@ -3,8 +3,12 @@ import { NavLink } from "react-router-dom"
 const Div = (nome,local,tipo,desc,img) => {
   var nometoLink = nome.replaceAll(' ','')
   // const imglink = 'url('+img+')'
+  function onLink() {
+    localStorage.setItem('UVC_Desc',desc)
+    localStorage.setItem('PagAnterior',window.location.pathname)
+  }
   return (
-<a key={nome} href={'paghist'+tipo+ nome} onClick={() => localStorage.setItem('UVC_Desc',desc)}><div className={`slide ${nome}`}></div></a>
+<a key={nome} href={'paghist'+tipo+ nome} onClick={onLink}><div className={`slide ${nome}`}></div></a>
 )
 }
 

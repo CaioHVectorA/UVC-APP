@@ -21,14 +21,28 @@ function Ato(...Args) {
       new Ato('EM BREVE',5,3,['EM BREVE'],'DerooDaem'),
       ]
       export var Guardiões = [
-      new Ato('Calouros',1,3,['EM BREVE'],'Guardiões'),
-      new Ato('Apocalipse',2,3,['EM BREVE'],'Guardiões'),
-      new Ato('O Fogo e o Trovão',3,3,['EM BREVE'],'Guardiões'),
-      new Ato('Rebeldes',4,3,['EM BREVE'],'Guardiões'),
-      new Ato('Antigo Conhecido',5,3,['EM BREVE'],'Guardiões'),
-      new Ato('A Guerra contra o Demônio',6,3,['EM BREVE'],'Guardiões'),
-      new Ato('A volta dos rebeldes',7,3,['EM BREVE'],'Guardiões'),
-      new Ato('Poder,de verdade',7,3,['EM BREVE'],'Guardiões')
+      new Ato('Calouros',1,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('Apocalipse',2,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('O Fogo e o Trovão',3,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('Rebeldes',4,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('Antigo Conhecido',5,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('A Guerra contra o Demônio',6,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('A volta dos rebeldes',7,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões'),
+      new Ato('Poder,de verdade',7,3,['EM BREVE','EM BREVE','EM BREVE'],'Guardiões')
+      ]
+      export var Congregadores = [
+      new Ato('Prelúdio',1,3,['EM BREVE','EM BREVE','EM BREVE'],'Congregadores'),
+      new Ato('Tirania e Soberania',1,3,['EM BREVE','EM BREVE','EM BREVE'],'Congregadores'),
+      new Ato('Surpresas',1,3,['EM BREVE','EM BREVE','EM BREVE'],'Congregadores'),
+      new Ato('O Planeta Chave',1,3,['EM BREVE','EM BREVE','EM BREVE'],'Congregadores'),
+      ]
+      export var MeninoResiliente = [
+      new Ato('Uma Nova Luz',1,3,['EM BREVE','EM BREVE','EM BREVE'],'MeninoResiliente'),
+      new Ato('Resiliência e Persistência',1,3,['EM BREVE','EM BREVE','EM BREVE'],'MeninoResiliente'),
+      new Ato('Persistência e Ascensão',1,3,['EM BREVE','EM BREVE','EM BREVE'],'MeninoResiliente'),
+      new Ato('Nova Cidade,Nova Vida',1,3,['EM BREVE','EM BREVE','EM BREVE'],'MeninoResiliente'),
+      new Ato('Tineros',1,3,['EM BREVE','EM BREVE','EM BREVE'],'MeninoResiliente'),
+      new Ato('Um Aliado Inesperado',1,3,['EM BREVE','EM BREVE','EM BREVE'],'MeninoResiliente'),
       ]
     export var AllAtos = []
-    AllAtos.push(RedRightHand,DerooDaem,Guardiões)
+    AllAtos.push(RedRightHand,DerooDaem,Guardiões,Congregadores,MeninoResiliente)
