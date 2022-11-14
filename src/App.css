@@ -49,8 +49,12 @@ html {scroll-behavior: smooth;}
 
 .Button {
   background-color: #FFBB3D;
+  text-decoration: none;
     color: #020202;
     font-size: 20px;
+    font-weight: 660;
     padding: 3px 6px;
     border-radius: 25px;
+  box-shadow: 0px 0px 14px -7px #f09819;
+    touch-action: manipulation;
 }

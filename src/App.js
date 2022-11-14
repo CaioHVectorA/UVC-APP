@@ -10,6 +10,7 @@ import PageSolos from './components/PageHistSOLOS';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ReadPage from './components/ReadPage';
 import Error from './components/Error';
+import Favorites from './components/Favorites';
 
 let PathFull;
 const { pathname } = window.location
@@ -42,7 +43,9 @@ function App() {
     Page = ReadPage
   } else if (pathname === '/error') {
     Page = Error
-  }
+  } else if (pathname === '/Fav') {
+    Page = Favorites
+  }  
   return (
     <div>
       <Page />

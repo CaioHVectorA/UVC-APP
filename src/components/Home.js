@@ -6,10 +6,10 @@ import Hists from './Hists'
 import { Series } from './Backend'
 import { Solos } from './Backend'
 import { LeiaAgora } from './Backend'
-const Home = () => {
-    
+import PageHist from './PageHistSERIE'
+import { FavSlots } from './BackendEPS'
 
-    console.log(Series,Solos)
+const Home = () => {
   return (
     <div style={{paddingBottom: '150px'}}>
         <Header Nome="Home"/>
@@ -19,10 +19,11 @@ const Home = () => {
         <Detail />
         <h3 className='subtitle'>Veja os Contos mais requisitos</h3>
         <br></br>
-        <div style={{width:'100%',height:'390px'}} className="gradient">
+        <div style={{width:'100%',height:'460px',display: 'grid',placeItems: 'center',paddingBottom: '50px'}} className="gradient">
             <h1 className='subtitle' style={{fontSize:'32px'}}>Conto do Mês</h1>
-            <div style={{width:'80%',height:'200px',backgroundColor: '#e7e7e7e7',margin: '0 auto',borderRadius: '25px'}}></div>
-            <p style={{margin: '0 auto',textAlign:'center',maxWidth: '320px',marginTop:'12px'}}>Os grandes heróis universais,que ajudam quaisquer uns sem pensar duas vezes,ganharam 6 episódios.O que está esperando? Se você preza pela justiça,paz e a liberdade,acompanhe-os!</p>
+            <div className='Guardiões' style={{width:'80%',height:'200px',backgroundColor: '#e7e7e7e7',margin: '0 auto',borderRadius: '25px',backgroundSize: '80%'}}></div>
+            <p style={{margin: '0 auto',textAlign:'center',maxWidth: '320px',marginTop:'12px'}}>Conheça a rotina de uma família,que após grandes dificuldades,conseguiram superpoderes incríveis;Apesar disso,eles não perderam seu lado humano,e terão grandiosas dificuldades em seu caminho.</p>
+            <a className='Button' style={{margin: '0 auto'}} href={'paghistSERIESGuardiões'}>Acesse Agora</a>
         </div>
         <br></br>
         <div>

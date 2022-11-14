@@ -46,3 +46,30 @@ function Ato(...Args) {
       ]
     export var AllAtos = []
     AllAtos.push(RedRightHand,DerooDaem,Guardiões,Congregadores,MeninoResiliente)
+
+
+      if (!localStorage.UVC_FAV1 || localStorage.UVC_FAV1 === 'undefined') {
+      var Fav1 = []
+      localStorage.setItem('UVC_FAV1','undefined')
+      } else {var Fav1 = [ localStorage.UVC_FAV1 ]}
+      if (!localStorage.UVC_FAV2 || localStorage.UVC_FAV2 === 'undefined') {
+      var Fav2 = []
+      localStorage.setItem('UVC_FAV2','undefined')
+      } else {var Fav2 = [ localStorage.UVC_FAV2 ]}
+      if (!localStorage.UVC_FAV3 || localStorage.UVC_FAV3 === 'undefined') {
+      var Fav3 = []
+      localStorage.setItem('UVC_FAV3','undefined')
+      } else {var Fav3 = [ localStorage.UVC_FAV3 ]}
+      if (!localStorage.UVC_FAV4 || localStorage.UVC_FAV4 === 'undefined') {
+      var Fav4 = []
+      localStorage.setItem('UVC_FAV4','undefined')
+      } else {var Fav4 = [ localStorage.UVC_FAV4 ]}
+      if (!localStorage.UVC_FAV5 || localStorage.UVC_FAV5 === 'undefined') {
+      var Fav5 = []
+      localStorage.setItem('UVC_FAV5','undefined')
+      } else {var Fav5 = [ localStorage.UVC_FAV5 ]}
+
+
+
+    export var FavSlots = []
+      FavSlots.push(Fav1,Fav2,Fav3,Fav4,Fav5)

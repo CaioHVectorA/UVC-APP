@@ -15,29 +15,18 @@ const readPage = () => {
     let HistComp;
     if (HistAtual === 'Ciecon') {
     HistComp = Ciecon
-    }
-    if (HistAtual === 'Hades') {
+    } else if (HistAtual === 'Hades') {
       HistComp = Hades
-      }
-    if (HistAtual === 'Kerry') {
+      } else if (HistAtual === 'Kerry') {
       HistComp = Kerry
-      }
-    if (HistAtual === 'OGlacialFimdomundo') {
+      } else if (HistAtual === 'OGlacialFimdomundo') {
       HistComp = OGlacialFimdomundo
-      }
-    if (HistAtual === 'PunhoMortal') {
+      } else if (HistAtual === 'PunhoMortal') {
       HistComp = PunhoMortal
-      }
-    if (HistAtual.startsWith('Red')) {
+      } else if (HistAtual.startsWith('Red')) {
       HistComp = RedRightHand
-      }
-    if (HistAtual === 'Kerry') {
-      HistComp = Kerry
-      }
-    if (HistAtual === 'Kerry') {
-      HistComp = Kerry
-      }
-return (
+      } else {window.location.pathname = '/error'}
+      return (
     <div id='#top' style={{paddingBottom: '120px'}}>
         <Header Nome="Leitura"/>
         <div style={{padding: '40px 32px'}}>
