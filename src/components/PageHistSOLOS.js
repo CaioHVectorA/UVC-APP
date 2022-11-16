@@ -49,9 +49,9 @@ let TempFav;
 if (FavSlots[0][0] === soloData.nome || FavSlots[1][0] === soloData.nome || FavSlots[2][0] === soloData.nome || FavSlots[3][0] === soloData.nome || FavSlots[4][0] === soloData.nome) {TempFav = FavPreench} else {TempFav = Search}
 const [Heart, SetHeart] = React.useState(TempFav)
 function SetFavorite() {
+    if (Heart == Search) {
     if (localStorage.UVC_FAV1 === 'undefined' || localStorage.UVC_FAV2 === 'undefined' || localStorage.UVC_FAV3 === 'undefined' || localStorage.UVC_FAV4 === 'undefined' || localStorage.UVC_FAV5 === 'undefined') {
     var preencheu = false
-    if (Heart == Search) {
        SetHeart(FavPreench)
        FavSlots.forEach(FavSlot => {
            if (FavSlot.length == 0 && !preencheu) {
@@ -59,6 +59,7 @@ function SetFavorite() {
            preencheu = true
         }
 })
+} else {alert('Você atingiu o número máximo de histórias (5)')} 
 } else {
     SetHeart(Search)
     FavSlots.forEach(FavSlot => {
@@ -66,10 +67,6 @@ function SetFavorite() {
             FavSlot.pop()
         }
     })
-}
-} else {
-    console.log('aaaa')
-    alert('Você atingiu o máximo de histórias favoritas(5)')
 }
 console.log(FavSlots) 
 

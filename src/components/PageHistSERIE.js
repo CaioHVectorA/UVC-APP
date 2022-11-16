@@ -127,9 +127,9 @@ const PageHist = () => {
     if (FavSlots[0][0] === PathFull || FavSlots[1][0] === PathFull || FavSlots[2][0] === PathFull || FavSlots[3][0] === PathFull || FavSlots[4][0] === PathFull) {TempFav = FavPreench} else {TempFav = Search}
     const [Heart, SetHeart] = React.useState(TempFav)
     function SetFavorite() {
+        if (Heart == Search) {
         if (localStorage.UVC_FAV1 === 'undefined' || localStorage.UVC_FAV2 === 'undefined' || localStorage.UVC_FAV3 === 'undefined' || localStorage.UVC_FAV4 === 'undefined' || localStorage.UVC_FAV5 === 'undefined') {
             var preencheu = false
-            if (Heart == Search) {
            SetHeart(FavPreench)
            FavSlots.forEach(FavSlot => {
                if (FavSlot.length == 0 && !preencheu) {
@@ -137,7 +137,11 @@ const PageHist = () => {
                preencheu = true
             }
     })
-    } else {
+    
+} else {
+    alert('Você atingiu o máximo de histórias favoritas(5)')
+}
+ } else {
         SetHeart(Search)
         FavSlots.forEach(FavSlot => {
             if (FavSlot.includes(PathFull)) {
@@ -145,11 +149,6 @@ const PageHist = () => {
             }
         })
     }
-    console.log(FavSlots) 
-} else {
-    console.log('aaaa')
-    alert('Você atingiu o máximo de histórias favoritas(5)')
-}
     localStorage.setItem('UVC_FAV1',FavSlots[0][0])
     localStorage.setItem('UVC_FAV2',FavSlots[1][0])
     localStorage.setItem('UVC_FAV3',FavSlots[2][0])
@@ -157,7 +156,7 @@ const PageHist = () => {
     localStorage.setItem('UVC_FAV5',FavSlots[4][0])
     // console.log(PathFull,FavSlots[0],localStorage.UVC_FAV1)
     preencheu = false
-    }
+}
   return (
     <div style={{paddingBottom: '200px'}}>
     <Header Nome="Capítulos" />
